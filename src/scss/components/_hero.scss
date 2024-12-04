@@ -1,0 +1,25 @@
+$hero-desktop: "../img/Hero.webp";
+$hero-tablet: "../img/Hero-s.webp";
+
+#hero {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  // min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 60px 0;
+  aspect-ratio: 1921 / 797;
+
+  
+  background-image: url(#{$hero-desktop});
+
+  @include tablet{
+    background-image: url(#{$hero-tablet});
+    aspect-ratio: 950 / 486;
+
+    
+  }
+ 
+}

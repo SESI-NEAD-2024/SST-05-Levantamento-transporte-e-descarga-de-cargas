@@ -1,0 +1,28 @@
+.box-attention {
+    border-radius: 4px;
+    // padding: 24px 24px;
+    border-top: 3px solid lighten(#57bdbc, 15%);
+    background-color: var(--blue-green);
+
+    &--blue-deep {
+      background-color: var(--blue-deep);
+      border-top: 3px solid lighten(#0b66b0, 5%);
+
+    }
+    &--blue-light{
+      background-color: var(--blue-light);
+      border-top: 3px solid lighten(#44afd2, 5%);
+    }
+    &--white{
+      background-color: #fff;
+      border-top: 3px solid #5C5C5C26;
+    }
+    @include tablet{
+      padding: 16px 8px;
+  
+    }
+    @include mobile{
+      padding: 16px 8px;
+  
+    }
+  }
