@@ -12780,6 +12780,7 @@ nav .progress {
   --carousel-height: 430px;
   --carousel-item-height: 430px;
   height: var(--carousel-height) !important;
+  aspect-ratio: 1280/467 !important;
   position: relative;
   color: #5c5c5c;
 }
@@ -12869,8 +12870,8 @@ nav .progress {
 }
 @media only screen and (max-width : 600.99px) {
   .carousel-sst, .carousel-sst-cards-reveal, .carousel-sst-02 {
-    --carousel-height: 650px;
-    --carousel-item-height: 650px;
+    --carousel-height: 355px;
+    --carousel-item-height: 355px;
   }
 }
 .carousel-sst .carousel.carousel-slider .carousel-fixed-item.with-indicators, .carousel-sst-cards-reveal .carousel.carousel-slider .carousel-fixed-item.with-indicators, .carousel-sst-02 .carousel.carousel-slider .carousel-fixed-item.with-indicators {

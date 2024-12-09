@@ -17,7 +17,7 @@ export default {
       items: [
         {
           id: 1,
-          img: "src/img/carousel01.png",
+          img: "src/img/carousel02.webp",
           alt: "Carga",
 
           
@@ -34,7 +34,7 @@ export default {
         },
         {
           id: 2,
-          img: "src/img/carousel02.png",
+          img: "src/img/carousel03.webp",
           alt: "Carga",
 
           
@@ -47,7 +47,7 @@ export default {
         },
         {
           id: 3,
-          img: "src/img/carousel03.png",
+          img: "src/img/carousel04.webp",
           alt: "Carga",
 
           
@@ -67,7 +67,7 @@ export default {
         },
         {
           id: 4,
-          img: "src/img/carousel04.png",
+          img: "src/img/carousel05.webp",
           alt: "Carga",
 
           
@@ -77,14 +77,26 @@ export default {
             Defina o caminho para o transporte de cargas, eliminando obstáculos e evitando desníveis no piso que possam causar quedas.​
 
             </p>
+            
+            `,
+        },
+        {
+          id: 5,
+          img: "src/img/carousel06.webp",
+          alt: "Carga",
+
+          
+          html://html 
+            `
+           
             <p>
             A frequência de levantamentos não deve exceder um por minuto. 
             </p>
             `,
         },
         {
-          id: 5,
-          img: "src/img/carousel05.png",
+          id: 6,
+          img: "src/img/carousel07.webp",
           alt: "Carga",
 
           
@@ -97,8 +109,8 @@ export default {
             `,
         },
         {
-          id: 6,
-          img: "src/img/carousel06.png",
+          id: 7,
+          img: "src/img/carousel01.webp",
           alt: "Carga",
 
           
