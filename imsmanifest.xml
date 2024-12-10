@@ -14,12 +14,12 @@ from the Reload Content Package Generator - http://www.reload.ac.uk-->
                         http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
     <organizations default="sesi-mg">
         <organization identifier="sesi-mg" structure="hierarchical">
-            <title>Aula 01 | Quem é você | CHOICES 6°Ano</title>
+            <title>SESI vida</title>
             <item
                 identifier="item-identifier"
                 isvisible="true"
                 identifierref="sco01">
-                <title>Aula 01 | Desvendando o mistério de si mesmo</title>
+                <title>Levantamento, Transporte e Descarga Individual de Cargas</title>
             </item>
         </organization>
     </organizations>
