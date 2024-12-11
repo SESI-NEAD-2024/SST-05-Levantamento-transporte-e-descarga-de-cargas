@@ -130,7 +130,7 @@ gulp.task("buildImg", () => {
  * @return {Promise<void>} Uma promessa que é resolvida quando o arquivo 'aos.css' é copiado para o diretório 'dist/src/css'.
  */
 gulp.task("copyCss", () => {
-  return src(["src/css/aos.css"])
+  return src("src/css/aos.css")
   .pipe(dest("dist/scorm_open/src/css"));
 });
 
