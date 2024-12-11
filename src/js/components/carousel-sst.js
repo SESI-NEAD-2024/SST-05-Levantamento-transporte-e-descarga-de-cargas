@@ -103,7 +103,7 @@ export default {
           html://html 
             `
             <p>
-            Se a carga estiver posicionada abaixo de 75 cm, use os músculos das pernas para se levantar, evitando curvaturas ou torções na coluna vertebral.. ​
+            Se a carga estiver posicionada abaixo de 75 cm, use os músculos das pernas para se levantar, evitando curvaturas ou torções na coluna vertebral. ​
             </p>
 ​
             `,
