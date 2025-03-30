@@ -1,11 +1,4 @@
-export default {
-  name: "AppFooter",
-  data() {
-    return {
-      year: new Date().getFullYear(),
-    };
-  },
-  template: `
+export default{name:"AppFooter",data(){return{year:(new Date).getFullYear()}},template:`
     <footer class="card card--purple-shadow">
       <div class="container card-content">
         <div>
@@ -19,5 +12,4 @@ export default {
         </div>
       </div>
     </footer>
-  `,
-};
+  `};

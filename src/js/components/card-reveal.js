@@ -1,13 +1,4 @@
-export default {
-    name: "CardReveal",
-    props:{
-
-    },
-    
-  
-    
-    template://html
-    `
+export default{name:"CardReveal",props:{},template:`
     <div class="card mr-24">
                 <div class="card-image activator">
                   <img
@@ -51,6 +42,4 @@ export default {
                   </p>
                 </div>
               </div>
-    `
-  };
-  
+    `};

@@ -1,50 +1,18 @@
-import {
-  onMounted,
-} from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
-
-export default {
-  setup() {
-    onMounted(() => {
-      console.log('questions');
-    });
-
-    // Verifica Questao
-    const verificaQuestao = (event, questao) => {
-      const gabaritoQuestoes = { q1: "a" };
-      let selecionado = event.target.value;
-      let correto = `
+import{onMounted}from"https://unpkg.com/vue@3/dist/vue.esm-browser.js";export default{setup(){onMounted(()=>{console.log("questions")});return{verificaQuestao:(e,a)=>{e=e.target.value;document.querySelector("#"+a).querySelector(".feedback").innerHTML=e==={q1:"a"}[a]?`
         <div class="question-result question-result__correto">
           <p class="body1 flex--align-center">  
             <span class="material-symbols-rounded mx-5">sentiment_very_satisfied</span>
            <b> Acertou!</b>
           </p>
         </div>
-      `;
-      let incorreto = `
+      `:`
         <div class="question-result question-result__incorreto">
           <p class="body1 flex--align-center">
              <span class="material-symbols-rounded mx-5">sentiment_very_dissatisfied</span>
             <b>Ops!</b>
           </p>
         </div>
-      `;
-
-      if (selecionado === gabaritoQuestoes[questao]) {
-        document
-          .querySelector("#" + questao)
-          .querySelector(".feedback").innerHTML = correto;
-      } else {
-        document
-          .querySelector("#" + questao)
-          .querySelector(".feedback").innerHTML = incorreto;
-      }
-    };
-
-    return { verificaQuestao };
-  },
-
-  template: //html
-  `
+      `}}},template:`
     <!-- Question 1 -->
     <div class="question-radio" id="q1">
       <p class="body1 mt-2"><b>
@@ -78,5 +46,4 @@ export default {
       
       <div class="feedback"></div>
     </div>
-  `,
-};
+  `};

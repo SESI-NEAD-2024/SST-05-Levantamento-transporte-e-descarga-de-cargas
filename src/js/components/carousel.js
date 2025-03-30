@@ -1,32 +1,11 @@
-// Só funciona 1 componente por página
-export default {
-  data() {
-    return {
-      items: [
-        {
-          id: 1,
-          img: "src/img/aula/gif-07.webp",
-          alt: "Função",
-
-          
-          html://html 
-          `
+export default{data(){return{items:[{id:1,img:"src/img/aula/gif-07.webp",alt:"Função",html:`
             <p class="body1 purple-text"><b>Função</b></p>
             <br />
             <p>Agora, quero ver se você conhece bem os lipídios. Faça uma lista das funções dos lipídios no caderno. Nos próximos slides, discutiremos essas funções.</p>
             <br>
             <p>Dei uma dica, hein! <b>Funções.</b></p>
             
-            `,
-        },
-        {
-          id: 2,
-          img: "src/img/aula/gif-08.webp",
-          alt: "ENGORDAR",
-
-          
-          html://html 
-          `
+            `},{id:2,img:"src/img/aula/gif-08.webp",alt:"ENGORDAR",html:`
          
             <p>E a função é…. ENGORDAR!
             </p>
@@ -37,16 +16,7 @@ export default {
             <p>Você sabe que o engordar tem a ver com uma função dos lipídios? Veremos a seguir.
             </p>
             
-            `,
-        },
-        {
-          id: 3,
-          img: "src/img/aula/gif-09.webp",
-          alt: "Energética",
-
-          
-          html://html 
-          `
+            `},{id:3,img:"src/img/aula/gif-09.webp",alt:"Energética",html:`
          
             <p>
             <span class="purple-text">Energética.</span>
@@ -58,16 +28,7 @@ export default {
 
             </p>
             
-            `,
-        },
-        {
-          id: 4,
-          img: "src/img/aula/static-06.jpg",
-          alt: "Função",
-
-          
-          html://html 
-          `
+            `},{id:4,img:"src/img/aula/static-06.jpg",alt:"Função",html:`
          
             <p>
             Respondendo à questão feita…
@@ -80,32 +41,14 @@ export default {
 
             </p>
             
-            `,
-        },
-        {
-          id: 5,
-          img: "src/img/aula/static-07.jpg",
-          alt: "Função",
-
-          
-          html://html 
-          `
+            `},{id:5,img:"src/img/aula/static-07.jpg",alt:"Função",html:`
          
             <p>
             Quando consumimos muita gordura, nós a acumulamos como reserva energética nesse tecido, que acaba aumentando. Logo, engordamos.
 
             </p>
             
-            `,
-        },
-        {
-          id: 6,
-          img: "src/img/aula/static-08.jpg",
-          alt: "Isolamento térmico.",
-
-          
-          html://html 
-          `
+            `},{id:6,img:"src/img/aula/static-08.jpg",alt:"Isolamento térmico.",html:`
          
             <p class="purple-text">
             Isolamento térmico.
@@ -121,32 +64,14 @@ export default {
 
             </p>
             
-            `,
-        },
-        {
-          id: 7,
-          img: "src/img/aula/static-07.jpg",
-          alt: "sobrepeso",
-
-          
-          html://html 
-          `
+            `},{id:7,img:"src/img/aula/static-07.jpg",alt:"sobrepeso",html:`
          
             <p>
             Esse é o motivo de pessoas em sobrepeso sentirem mais calor ao fazer atividade física, já que a temperatura interna se eleva rapidamente.
 
             </p>
             
-            `,
-        },
-        {
-          id: 8,
-          img: "src/img/aula/static-09.jpeg",
-          alt: "sobrepeso",
-
-          
-          html://html 
-          `
+            `},{id:8,img:"src/img/aula/static-09.jpeg",alt:"sobrepeso",html:`
           <p class="purple-text">
           Produção de hormônios.
 
@@ -157,16 +82,7 @@ export default {
 
             </p>
             
-            `,
-        },
-        {
-          id: 9,
-          img: "src/img/aula/static-10.jpg",
-          alt: "Impermeabilização",
-
-          
-          html://html 
-          `
+            `},{id:9,img:"src/img/aula/static-10.jpg",alt:"Impermeabilização",html:`
           <p class="purple-text">
           Impermeabilização.
 
@@ -183,16 +99,7 @@ export default {
 
             </p>
             
-            `,
-        },
-        {
-          id: 10,
-          img: "src/img/aula/gif-09-1.webp",
-          alt: "Impermeabilização",
-
-          
-          html://html 
-          `
+            `},{id:10,img:"src/img/aula/gif-09-1.webp",alt:"Impermeabilização",html:`
             <p>
             Transporte de vitaminas.
 
@@ -203,63 +110,7 @@ export default {
 
             </p>
             
-            `,
-        },
-      ],
-      carousel: {
-        class: "carousel-01",
-        key: 0,
-        elemento: null,
-        qtdSlides: 0,
-        ordem: 1,
-        ordemAnterior: 99,
-      },
-
-      instances: null, // Declare instances as a reactive variable
-    };
-  },
-  methods: {
-    next() {
-      this.carousel.elemento.querySelector(".previous").style.display = "flex";
-      this.instances[this.carousel.key].next(); // Access the first carousel instance
-    },
-    previous() {
-      this.instances[this.carousel.key].prev();
-    },
-  },
-  mounted() {
-    this.carousel.elemento = document.querySelector("." + this.carousel.class);
-
-    let elems = document.querySelectorAll(".carousel." + this.carousel.class);
-    this.instances = M.Carousel.init(elems, {
-      fullWidth: true,
-      indicators: true,
-      shift: 20,
-      numVisible: 1,
-      onCycleTo: (slide) => {
-        // this.qtdSlides = slide.parentNode.querySelectorAll(".carousel-item").length;
-
-        // Lógica para saber o slide atual
-        let search = slide.parentNode;
-        let slideIndex = [...search.children].indexOf(slide);
-        this.carousel.ordem = slideIndex;
-        this.carousel.ordemAnterior = this.ordem - 1;
-
-        // Se for o primeiro slide, não mostrar o botão anterior
-        if (this.carousel.ordem == 1) {
-          this.carousel.elemento.querySelector(".previous").style.display =
-            "none";
-        } else {
-          this.carousel.elemento.querySelector(".previous").style.display =
-            "flex";
-        }
-      },
-    });
-    this.carousel.elemento.querySelector(".previous").style.display = "none";
-  },
-
-  //html
-  template: `
+            `}],carousel:{class:"carousel-01",key:0,elemento:null,qtdSlides:0,ordem:1,ordemAnterior:99},instances:null}},methods:{next(){this.carousel.elemento.querySelector(".previous").style.display="flex",this.instances[this.carousel.key].next()},previous(){this.instances[this.carousel.key].prev()}},mounted(){this.carousel.elemento=document.querySelector("."+this.carousel.class);var e=document.querySelectorAll(".carousel."+this.carousel.class);this.instances=M.Carousel.init(e,{fullWidth:!0,indicators:!0,shift:20,numVisible:1,onCycleTo:e=>{e=[...e.parentNode.children].indexOf(e);this.carousel.ordem=e,this.carousel.ordemAnterior=this.ordem-1,1==this.carousel.ordem?this.carousel.elemento.querySelector(".previous").style.display="none":this.carousel.elemento.querySelector(".previous").style.display="flex"}}),this.carousel.elemento.querySelector(".previous").style.display="none"},template:`
     <!-- Carousel -->
     <div class="carousel carousel-slider center" :class="[carousel.class]">
     <!-- Arrows -->
@@ -290,5 +141,4 @@ export default {
       
     </div>
     <!-- Fim Carousel -->
-  `,
-};
+  `};
